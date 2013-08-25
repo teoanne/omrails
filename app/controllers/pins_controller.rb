@@ -85,3 +85,7 @@ before_filter :authenticate_user!, except: [:index]
     end
   end
 end
+
+def pin_params
+   params.require(:pin).permit(:description, :image)
+end
